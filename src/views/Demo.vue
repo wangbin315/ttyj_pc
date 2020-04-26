@@ -2,18 +2,30 @@
   <div class="demo">
     <el-container>
       <el-header>
-        <el-menu
-          :default-active="activeIndex2"
-          class="el-menu-demo"
-          mode="horizontal"
-          @select="handleSelect"
-          background-color="#545c64"
-          text-color="#fff"
-          active-text-color="#ffd04b">
-          <el-menu-item index="1">处理中心</el-menu-item>
-          <el-menu-item index="2">我的工作台</el-menu-item>
-          <el-menu-item index="3">消息中心</el-menu-item>
-        </el-menu>
+        <div class="head-title">
+          <el-row>
+            <el-col :span="6">
+              <div class="grid-content bg-purple">
+                <h1>综合交通运行监测与预警系统</h1>
+              </div>
+            </el-col>
+            <el-col :span="12">
+              <div class="grid-content bg-purple-light nav-top">
+                <el-menu 
+                  :default-active="activeIndex" 
+                  class="el-menu-demo" 
+                  mode="horizontal"
+                  text-color="#fff"
+                  active-text-color="#fff">
+                  <el-menu-item index="1">行业指数宏观分析</el-menu-item>
+                  <el-menu-item index="2">行业运行指标精细化监测</el-menu-item>
+                  <el-menu-item index="3">监测预警管理</el-menu-item>
+                </el-menu>
+              </div>
+            </el-col>
+            <el-col :span="6"><div class="grid-content bg-purple head-login-info">当前用户信息</div></el-col>
+          </el-row>
+        </div>
       </el-header>
       <el-container>
         <el-aside width="200px">
@@ -56,7 +68,7 @@ export default {
   name: 'Demo',
   data () {
     return {
-      activeIndex2: '1',
+      activeIndex: '1',
       data: [{
         label: '一级 1',
         children: [{
@@ -115,7 +127,32 @@ export default {
 </script>
 
 <!-- <style  src='../assets/css/demo.css'></style> 可以引入自定义样式 --> 
+<style  src='../assets/css/base.css'></style> 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style lang="less" scoped>
+.head-title {
+  background: red;
+  height: 70px;
+  line-height: 70px;
+  background-image: url(../assets/images/bj.png);
+  background-repeat: no-repeat;
+  background-size: 100%;
+  margin: 0;
+  padding: 0;
+  h1{
+    line-height: 70px;
+    height: 100%;
+    padding-left: 15px;
+    color:#FFFFFF;
+    font-size: 24px;
+    text-align: left;
+    font-weight:500;
+  }
+  .head-login-info{
+    line-height: 70px;
+    font-size: 24px;
+    color: #ffffff;
+  }
+}
 
 </style>
