@@ -1,0 +1,33 @@
+/*****  关于element 组件公用样式  ***/
+    
+/* 
+    **
+    **  关于el-menu 导航菜单的公用样式
+    **
+*/
+.head-title .el-menu{background-color:transparent;}
+.head-title .el-menu-item{font-size: 16px;font-weight: 500;}
+.head-title .el-menu.el-menu--horizontal{border-bottom:none;}
+.head-title .el-menu--horizontal>.el-menu-item{
+    height: 70px;
+    line-height: 70px;
+}
+.head-title .el-menu--horizontal>.el-menu-item.is-active{
+    border-bottom:none;
+    background-color: rgb(53, 58, 145);
+}
+.head-title .el-menu--horizontal .el-menu-item:not(.is-disabled):focus, 
+.head-title .el-menu--horizontal .el-menu-item:not(.is-disabled):hover{
+    outline: none;
+    background-color: rgb(53, 58, 145);
+    color: #ffffff;
+    border-bottom:none;
+}
+
+/* 
+    **
+    **  关于el-container，el-aside 的公用样式
+    **
+*/
+.el-container, .el-aside, .el-menu{height: 100%;}
+.el-main{padding: 0;height: 100%;background: #ffffff;}

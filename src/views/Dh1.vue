@@ -1,27 +1,13 @@
 <template>
-  <div class="demo">
-
+  <div class="dh1">
+      这里是菜单一的内容
   </div>
 </template>
 
 <script>
 
-// import XX from "@/components/XX";
-
 export default {
-  name: 'Demo',
-  components: {
-   
-  },
-  props: {
-   
-  },
-  computed: {
-    
-  },
-  watch: {
-     
-  },
+  name: 'Dh1',
   data () {
     return {
 
@@ -32,18 +18,15 @@ export default {
       
     }
   },
-  created() {
-    this.init();
-  },
   mounted() {
-
+    this.init()
   }
 }
 </script>
 
 <!-- <style  src='../assets/css/demo.css'></style> 可以引入自定义样式 --> 
+<style  src='../assets/css/common.css'></style> 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style lang="less" scoped>
-
 
 </style>

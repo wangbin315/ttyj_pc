@@ -1,47 +1,38 @@
 <template>
-  <div class="demo">
-
-  </div>
+  <div class="firstChild">
+    <bar></bar>
+	</div>
 </template>
 
 <script>
 
-// import XX from "@/components/XX";
+import Bar from '@/components/echarts-bar/Bar'
+
 
 export default {
-  name: 'Demo',
-  components: {
-   
-  },
-  props: {
-   
+  name: 'FirstChild',
+  components: { Bar },
+  data () {
+    return {
+      
+    }
   },
   computed: {
     
-  },
-  watch: {
-     
-  },
-  data () {
-    return {
-
-    }
   },
   methods: {
     init() {
       
     }
   },
-  created() {
-    this.init();
-  },
   mounted() {
-
+    this.init()
   }
 }
 </script>
 
 <!-- <style  src='../assets/css/demo.css'></style> 可以引入自定义样式 --> 
+<style  src='../assets/css/common.css'></style> 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style lang="less" scoped>
 

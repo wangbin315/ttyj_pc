@@ -10,6 +10,7 @@ export default {
   name: 'Notdefined',
   data () {
     return {
+
     }
   }
 }
