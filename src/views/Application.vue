@@ -14,6 +14,7 @@
               <div class="grid-content bg-purple-light nav-top">
                 <el-menu 
                   :default-active="activeIndex" 
+                  @select="handleSelect"
                   class="el-menu-demo" 
                   mode="horizontal"
                   text-color="#fff"
@@ -85,6 +86,12 @@ export default {
     init() {
       this.changeSideBar()
     },
+    handleSelect(index){
+      console.log(index)
+      // 切换导航后如果需要跳回上级(某级)页面 在此配置
+      // let path = (location.href).split('/').pop()
+      // path = path.indexOf('?')?path.split('?')[0]:path
+    },
     handleOpen(key, keyPath) {
       // console.log(key, keyPath);
     },
@@ -96,7 +103,7 @@ export default {
       if(cur_route.indexOf('firstChild') >= 0){
         this.defaultActive = '3-1'
       }else if(cur_route.indexOf('dh1') >= 0){
-        this.defaultActive = '2'
+        this.defaultActive = '1'
       }else if(cur_route.indexOf('dh2') >= 0){
         this.defaultActive = '2'
       }
@@ -109,14 +116,14 @@ export default {
           if(cur_route.indexOf('dh1') >= 0){
             return;
           }else{
-            this.$router.replace('/dh1')
+            this.$router.replace('dh1')
           }
         break;
         case '2':
           if(cur_route.indexOf('dh2') >= 0){
             return;
           }else{
-            this.$router.replace('/dh2')
+            this.$router.replace('dh2')
           }
         break;
         case '3-1':
